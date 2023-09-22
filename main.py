@@ -18,13 +18,11 @@ def start(message):
 def menu(message):
     global language
     if language == 1:
-        bot.send_message(message.from_user.id, 'Один')
-
+        bot.send_message(message.from_user.id, 'Выбран: Русский язык')
     elif language == 2:
-        bot.send_message(message.from_user.id, 'One')
-
+        bot.send_message(message.from_user.id, 'Be Chosen: English language')
     else:
-        bot.send_message(message.from_user.id, 'Error')
+        bot.send_message(message.from_user.id, 'Ошибка / Error')
 
 @bot.message_handler(commands=['language'])
 def language(message):
